@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////////
+///////////////////// Map Editor Help /////////////////////
+///////////////////////////////////////////////////////////
+
+The map editor consists of 3 main sections:
+
+- The drawing area
+- The tileset
+- The tile options
+
+############################
+##### The drawing area #####
+############################
+
+The drawing area is the part of the editor that displays and allows you to edit your map. It is on the left side of the editor and takes up most of the screen. The dark grey part is not part of the drawing area. The drawing area defaults to 10x10 tiles all filled with the currently selected tile (See later).
+
+
+Left click - places the currently selected tile on the current square. You can click and drag for quickly painting large areas with one tile.
+
+Right Click - Selects the tile under the cursor. When you want to see information about a certain tile or you want to change this information (See tile options section), right click it. The selected tile is highlighted by a red box.
+
+Shift And Right Click - This draws a red cross through the tile under the cursor indicating that it can not be walked on by the player. You can click and drag for quickly painting large areas of unwalkable tiles. All tiles in the map are walkable by default.
+
+Shift And Left Click - This removes the red cross through the tile under the cursor indicating that it can now be walked on by the player. It effectively makes a non-walkable tile walkable again. You can click and drag for quickly painting large areas of walkable tiles. All tiles in the map are walkable by default.
+
+Control And Click (Left or Right) - Places a red circle containing a white S on the tile under the cursor indicating that this is the tile the player will start on.
+
+############################
+#####       Menus      #####
+############################
+
+New map - You can create a new drawing area by clicking the "File" menu and clicking "New". You will be prompted for a width and height. These are in tiles. If you made a mistake, you can click cancel.
+
+Load a map - To load a map you can click the "File" menu and click "Load". Browse to the map file and press "Open". The map will be opened and you can edit it in the drawing area.
+
+Save a map - Yo save a map click the "File" menu and click "Save". Browse to the location to save the map to and type in the filename and click the "Save" button. The map can be loaded by the game or the map editor now.
+
+Fill - You can fill the entire map with a certain tile by clicking the "Map" menu and clicking "Fill with current tile". Every tile in the map will be filled with the currently selected tile.
+
+Random Fill - You can make random tiles on the map turn to the currently selected tile (useful for things like trees and rocks). You can do this by clicking the "Map" menu and then clicking "Random Fill (walkable)" or "Random fill (unwalkable)". The walkable option makes these tiles all walkable (useful for stones) and the unwalkable one makes them all unwalkable (useful for trees).  Warning: If the map is already filled with this tile or you enter a larger number than there are squares not filled with this tile then continuing will crash the editor. So use with caution!
+
+Make Border - You can make a border of tiles around the map by clicking the "Map" menu and clicking "Make border". Like "Random Fill" you can have a walkable one or an unwalkable one.
+
+############################
+#####   The Tileset    #####
+############################
+
+On the top right of the editor is a set of tiles, simply select one by left or right clicking it. You can see a preview of it in the square below. You can see which tile is selected because it has a red square around it. When you "draw" on the drawing area or use any menu option wich uses "Current Tile" then it's this selected tile which will be used.
+
+############################
+#####   Tile Options   #####
+############################
+
+On the lower right hand side of the map are various options for tiles. You can change the options for the currently selected tile (see drawing area controls for information about how to select individual tiles).
+
+Contains Portal - This option, when set to true will turn this tile into a "portal" tile. When the user walks on this tile it will transport them to the given location (see below) on the given map (see below).
+
+Destination Tile - This only applies to portal tiles. The first box is the number of tiles across (from 0) to place the player when they step on the portal tile. The second box is the number of tiles down (from 0) to place the player when they step on the portal tile.
+
+Destination Map Name - This only applies to portal tiles. It specifies the map to load when the player steps on the portal tile. If left blank, no map is loaded.
+
+Show Non Walkable Symbol - This is not a single tile option as such. It does not apply to the map but rather just an option for the editor. When checked, the red cross through non walkable tiles is displayed and when unchecked, this is hidden. It is useful to turn it on when editing the map then turn it off to preview the finished map.
+
+
+To save the options of a tile when you change it you must click the "Apply" button.
